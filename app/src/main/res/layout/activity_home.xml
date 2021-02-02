@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zql.android.led.HomeActivity">
+
+    <com.zql.android.led.LEDView
+        android:id="@+id/led_about"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+    <com.zql.android.led.data.LEDDashboard
+        android:id="@+id/led_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/led_about"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_change_led_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_led_content"
+                    android:backgroundTint="@color/color_3"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_change_text_color"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_led_text_color" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_change_led_text_size"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_led_text_size"
+                    android:backgroundTint="@color/color_10" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_change_led_size"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_led_size"
+                    android:backgroundTint="@color/color_5" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <com.zql.android.led.LEDView
+            android:id="@+id/led_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+    </com.zql.android.led.data.LEDDashboard>
+
+</RelativeLayout>
